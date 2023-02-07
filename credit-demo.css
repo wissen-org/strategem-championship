@@ -1,0 +1,331 @@
+/* ============================= General Resets ==================================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    font-family: var(--font);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    background-color: #000000b7;
+}
+:root {
+    --font: 'Poppins', sans-serif;
+    --color: rgb(106, 164, 146);
+    --bg-color: #f4f4f4;
+}
+
+/* -------------======= Section Header ========--------------*/
+.section-header {
+	margin-bottom: 60px;
+	position: relative;
+	padding-bottom: 20px;
+}
+
+.section-header::before {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 60px;
+	height: 5px;
+	background: #f82249;
+	bottom: 0;
+	left: calc(50% - 25px);
+}
+
+.section-header h2 {
+	font-size: 36px;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+
+.section-header p {
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	font-size: 1rem;
+	font-weight: 500;
+	color: #9195a2;
+}
+
+.section-with-bg {
+	background-color: #f6f7fd;
+}
+
+/* ============================= Header Section ==================================*/
+.container1{
+    width: 100%;
+    height: 100vh;
+    background:transparent;
+    background-image: url("background1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+.header{
+    width: 1200px;
+    height: 80px;
+    position: fixed;
+    background: transparent;
+    margin-inline: auto;
+    z-index: 1000;
+}
+.header .logo{
+    margin: 10px;
+    vertical-align: middle;
+}
+
+/*---------------========= Navigation Section ==========-----------------*/
+.navlinks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    float: right;
+
+}
+.navlinks ul{
+    display: flex;
+    gap: 25px;
+}
+.navlinks ul li{
+    list-style: none;
+}
+.hoverlink{
+    padding: 5px 10px;
+    border: none;
+    text-decoration: none;
+    color: #cccc;
+    font-size: 0.9rem;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 3px;
+}
+.active{
+    color: rgb(41, 78, 41);
+}
+/* .hoverlink:hover{
+    background-color: rgba(101, 135, 136, 0.712);
+} */
+/* .hoverlink:active{
+
+} */
+.navlinks ul li::after {
+    content: '';
+    width: 0%;
+    height: 2.2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.navlinks ul li:hover::after {
+    width: 100%;
+}
+
+/* --------------=========Intro==========------------- */
+.intro-box{
+    position: relative;
+    width: 40vw;
+    height: 40vh;
+    margin-inline: auto;
+    left: -20px;
+    top: 60%;
+    transform: translateY(-43%);
+    text-align: center;
+}
+.intro-box h1{
+    font-size: 4rem;
+    color: #ffff;
+	font-weight: 700;
+	letter-spacing: 12px;
+	transition: 0.5s;
+    text-transform: uppercase;
+}
+
+/* =========================== SLIDER ============================== */
+.beta-red {
+    margin-top: 80px;
+    padding-top: 50px;
+    
+}
+.mySwiper h2{
+   
+    background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(71, 70, 70));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 700;
+    padding: 40px 10px 20px 10px;
+    text-align: center;
+    
+}
+.mySwiper span h2{
+    /* padding: 20px; */
+    border-bottom: 5px solid #f44336;
+}
+.swiper-wrapper {
+    
+    height: 35em;
+    display: flex;
+    align-items: center;
+    border-image: linear-gradient(to right, #f70aff, rgb(129, 13, 13));
+    border-image-slice: 1;
+}
+
+.card {
+    width: 18em;
+    height: 450px;
+    background: linear-gradient(to top right, #1d2136, #1d2136 );
+    border-radius: 2em;
+    box-shadow: 0 0 2em rgba(0, 0, 0, 0.2);
+    padding: 2em 1em;
+    border: 2px solid #80828e;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 2em;
+}
+
+.swiper-slide:not(.swiper-slide-active) {
+    filter: blur(1px);
+}
+
+.card__image {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 5px solid var(--color);
+    padding: 3px;
+    margin-bottom: 2em;
+}
+
+.card__image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card__title {
+    color: #ff03c8;
+    font-size: 1.5rem;
+    font-weight: 500;
+    position: relative;
+    top: .2em;
+}
+
+.card__name {
+    color: var(--color);
+}
+.post{
+    color: rgb(73, 146, 159);
+    font-size: 0.9rem;
+}
+.card__text {
+    color: #80828e;
+    text-align: center;
+    font-size: 1rem;
+    margin: 1em 0;
+    padding: 10px;
+}
+
+.social {
+    word-spacing: 2rem;
+    background-color: var(--color);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 2px;
+    
+}
+.social a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+.social a .fa-linkedin-in:hover{
+    color: rgb(13, 53, 253);
+}
+.social .fa-instagram:hover{
+    color: rgb(253, 13, 129);
+}
+.Head{
+    margin-top: 4px;
+}
+.Co-Head{
+    position: relative;
+    top: 20px;
+}
+
+/* -------footer section--------- */
+
+/* Footer top */
+.footer-top{
+    height: 20px;
+}
+/* Footer-section */
+.footer-section{
+    margin-top: 30px;
+    margin-inline: auto;
+    padding: 20px;
+    padding-top: 30px;
+    background-color: #0f111c;
+}
+.footer{
+    width: 1140px;
+    height: 200px;
+    margin-inline: auto;
+}
+.footer .logo{
+    width: 70px;
+}
+.footer-section .reset{
+    width: 50px;
+    float: right;
+    border-radius: 50%;
+    border: 2px solid #a4a4a4;
+}
+.footer .policy{
+    float: right;
+    position: relative;
+    top: 10%;
+    right: 10%;
+}
+.footer-section ul li{
+    display: inline;
+    padding: 0 10px;
+    list-style: none;
+    line-height: 2.1rem;
+    font-size: 0.8rem;
+    font-weight: 200;
+    font-family: 'Poppins', sans-serif;
+    color: #cccc;
+}
+.footer-section p{
+    font-size: 0.8rem;
+    color: rgb(129, 128, 128);
+    text-align: center;
+    font-family: 'Roboto' ,sans-serif;
+}
